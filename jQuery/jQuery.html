@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<script>
+    // wait until the document is loaded before running any jQuery
+    $(document).ready(function () {
+        // select the HTML element to append content
+        $('html').append(
+            // content to be added to the html element
+            "<body>\
+                <div id='container'>\
+                    <div id='inner'> \
+                        <h1>Basic JQuery</h1>\
+                        <p id='1'>Paragraph 1</p>\
+                        <p id='2'>Paragraph 2</p>\
+                        <p id='3'>Paragraph 3</p>\
+                    </div>\
+                </div>\
+            </body>"
+        )
+        // using jQuery to add css to the element with id = '2'
+        $("#2").css({ "color": "red" })
+        // set up an function event handler to the event 'click' to hide the h1 element.
+        $("#3").click(function () {
+            $("h1").fadeOut(800)
+        })
+        // set up another event handler to the mouseover event with the element with id = '1'
+        $("#1").mouseover(function () {
+            $(this).css({ "color": "red" })
+
+        })
+    })
+</script>
+
+</html>
